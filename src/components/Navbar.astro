@@ -76,11 +76,21 @@ const links = [
 <div class="h-16"></div>
 
 <script>
-  /** Close mobile menu after choosing a section or pressing Escape (single delegated listeners). */
+  /** Close mobile menu: section link, click outside, or Escape. */
   document.addEventListener("click", (e) => {
-    const a = e.target instanceof Element ? e.target.closest('details[data-mobile-nav] a[href^="#"]') : null;
-    if (!a) return;
-    a.closest("details[data-mobile-nav]")?.removeAttribute("open");
+    const details = document.querySelector("details[data-mobile-nav]");
+    if (!(details instanceof HTMLDetailsElement) || !details.open) return;
+
+    const target = e.target;
+    if (!(target instanceof Node)) return;
+
+    if (!details.contains(target)) {
+      details.removeAttribute("open");
+      return;
+    }
+
+    const a = target instanceof Element ? target.closest('a[href^="#"]') : null;
+    if (a && details.contains(a)) details.removeAttribute("open");
   });
 
   document.addEventListener("keydown", (e) => {
