@@ -16,16 +16,14 @@ const links = [
       />
     </a>
 
-    <!-- Same links as desktop; scroll horizontally on narrow screens -->
-    <div
-      class="min-w-0 flex-1 overflow-x-auto overscroll-x-contain [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden flex justify-center"
-    >
-      <ul class="flex w-max items-center gap-4 sm:gap-6 md:gap-8 py-0.5">
+    <!-- Desktop: inline links -->
+    <div class="hidden md:flex flex-1 justify-center min-w-0">
+      <ul class="flex items-center gap-8">
         {links.map((link) => (
-          <li class="shrink-0">
+          <li>
             <a
               href={link.href}
-              class="text-stone-600 hover:text-green-700 transition-colors font-medium text-sm sm:text-base whitespace-nowrap"
+              class="text-stone-600 hover:text-green-700 transition-colors font-medium"
             >
               {link.label}
             </a>
@@ -34,14 +32,59 @@ const links = [
       </ul>
     </div>
 
-    <a
-      href="#contacto"
-      class="shrink-0 bg-green-700 text-white px-3 sm:px-5 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors"
-    >
-      Contáctanos
-    </a>
+    <div class="flex flex-1 items-center justify-end gap-2 md:flex-none">
+      <!-- Mobile: dropdown menu -->
+      <details class="relative md:hidden group" data-mobile-nav>
+        <summary
+          class="list-none cursor-pointer inline-flex items-center justify-center gap-2 rounded-lg border border-stone-200 bg-white px-3 py-2 text-sm font-medium text-stone-700 shadow-sm transition-colors hover:border-green-200 hover:bg-stone-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600/40 [&::-webkit-details-marker]:hidden"
+        >
+          <span class="sr-only">Abrir menú de secciones</span>
+          <svg class="h-5 w-5 text-stone-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <path d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+          <span>Menú</span>
+        </summary>
+        <div
+          class="absolute right-0 top-full z-50 mt-2 min-w-[14rem] overflow-hidden rounded-xl border border-stone-200 bg-white py-2 shadow-lg ring-1 ring-black/5"
+        >
+          <ul class="flex flex-col">
+            {links.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="block px-4 py-3 text-sm font-medium text-stone-700 transition-colors hover:bg-stone-50 hover:text-green-700"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </details>
+
+      <a
+        href="#contacto"
+        class="shrink-0 bg-green-700 text-white px-3 sm:px-5 py-2 rounded-full text-sm font-medium hover:bg-green-800 transition-colors"
+      >
+        Contáctanos
+      </a>
+    </div>
   </nav>
 </header>
 
 <!-- Offset so content doesn't hide behind fixed navbar -->
 <div class="h-16"></div>
+
+<script>
+  /** Close mobile menu after choosing a section or pressing Escape (single delegated listeners). */
+  document.addEventListener("click", (e) => {
+    const a = e.target instanceof Element ? e.target.closest('details[data-mobile-nav] a[href^="#"]') : null;
+    if (!a) return;
+    a.closest("details[data-mobile-nav]")?.removeAttribute("open");
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    document.querySelector("details[data-mobile-nav][open]")?.removeAttribute("open");
+  });
+</script>
