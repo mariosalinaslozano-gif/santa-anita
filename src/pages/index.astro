@@ -8,14 +8,14 @@ import Navbar from '../components/Navbar.astro';
 
 
   <!-- HERO -->
-  <section class="py-24 bg-stone-50 flex flex-col justify-center items-center text-center px-6">
-    <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4">
+  <section class="py-20 sm:py-24 bg-stone-50 flex flex-col justify-center items-center text-center px-5 sm:px-6">
+    <p class="text-green-700 uppercase tracking-widest text-lg sm:text-xl font-semibold mb-4">
       Casa de Retiro Santa Anita
     </p>
-    <h1 class="text-4xl md:text-6xl font-bold text-stone-800 max-w-4xl leading-tight mb-6">
+    <h1 class="text-5xl md:text-6xl font-bold text-stone-800 max-w-4xl leading-tight mb-6">
       Un hogar donde cada día se vive plenamente
     </h1>
-    <p class="text-stone-500 text-lg md:text-xl max-w-2xl mb-10">
+    <p class="text-stone-500 text-lg sm:text-xl max-w-2xl mb-10">
       Un espacio para que las personas adultas mayores vivan con tranquilidad, 
       dignidad y acompañamiento profesional, en un entorno natural que promueve 
       el bienestar físico, emocional y social.
@@ -26,20 +26,20 @@ import Navbar from '../components/Navbar.astro';
   </section>
 
   <!-- QUIÉNES SOMOS -->
-  <section id="quienes-somos" class="py-16 px-6 bg-white">
+  <section id="quienes-somos" class="py-16 px-5 sm:px-6 bg-white">
     <div class="max-w-4xl mx-auto">
 
-      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+      <p class="text-green-700 uppercase tracking-widest text-lg sm:text-xl font-semibold mb-4 text-center">
         Quiénes Somos
       </p>
-      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+      <h2 class="text-4xl font-bold text-stone-800 text-center mb-10">
         Conoce nuestra historia y valores
       </h2>
 
       <!-- Misión -->
       <div class="mb-8">
-        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Misión</h3>
-        <p class="text-stone-600 text-lg leading-relaxed">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Misión</h3>
+        <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
           Ofrecer a las personas adultas mayores un entorno que conecte con la naturaleza, 
           seguro y profesional, que potencie su calidad de vida. A través de programas integrales: 
           ejercicio, actividades cognitivas, terapia ocupacional, convivencia social y espacios 
@@ -50,8 +50,8 @@ import Navbar from '../components/Navbar.astro';
 
       <!-- Visión -->
       <div class="mb-8">
-        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Visión</h3>
-        <p class="text-stone-600 text-lg leading-relaxed">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Visión</h3>
+        <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
           Ser la casa de retiro de referencia en la región por su excelencia en la atención 
           integral a adultos mayores, reconocida por la calidad humana de sus servicios, la 
           innovación en actividades cognitivas y la creación de comunidades donde cada residente 
@@ -61,9 +61,9 @@ import Navbar from '../components/Navbar.astro';
       </div>
 
       <!-- Qué nos diferencia -->
-      <div class="bg-stone-50 rounded-2xl p-8">
-        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">¿Qué nos diferencia?</h3>
-        <p class="text-stone-600 text-lg leading-relaxed">
+      <div class="bg-stone-50 rounded-2xl p-6 sm:p-8">
+        <h3 class="text-xl sm:text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">¿Qué nos diferencia?</h3>
+        <p class="text-stone-600 text-base sm:text-lg leading-relaxed">
           Promovemos un envejecimiento saludable a través de un trato cálido, respetuoso y digno, 
           reconociendo a cada residente como una persona única, con historia, valores y necesidades 
           propias, basados en actividades físicas, cognitivas, emocionales y sociales.
@@ -74,17 +74,17 @@ import Navbar from '../components/Navbar.astro';
   </section>
 
   <!-- VALORES -->
-  <section id="valores" class="py-16 px-6 bg-stone-50">
+  <section id="valores" class="py-16 px-5 sm:px-6 bg-stone-50">
     <div class="max-w-5xl mx-auto">
 
-      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+      <p class="text-green-700 uppercase tracking-widest text-lg sm:text-xl font-semibold mb-4 text-center">
         Nuestros Valores
       </p>
-      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+      <h2 class="text-4xl font-bold text-stone-800 text-center mb-10">
         Lo que nos guía cada día
       </h2>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
         {[
           { numero: "01", titulo: "Dignidad", descripcion: "Reconocemos y honramos la historia, decisiones y derechos de cada residente, garantizando un trato respetuoso y humano en todo momento." },
           { numero: "02", titulo: "Calidez Humana", descripcion: "Servimos con sensibilidad, cercanía y cariño, creando un ambiente de confianza, afecto y acompañamiento emocional." },
@@ -96,10 +96,10 @@ import Navbar from '../components/Navbar.astro';
           { numero: "08", titulo: "Responsabilidad y Orden", descripcion: "Cumplimos y hacemos cumplir el reglamento interno para garantizar la sana convivencia y el bienestar común." },
           { numero: "09", titulo: "Satisfacción en el Proceso", descripcion: "Promovemos que residentes y colaboradores encuentren bienestar y sentido en las actividades cotidianas, valorando cada etapa del camino." },
         ].map((valor) => (
-          <div class="bg-white rounded-2xl p-6 shadow-sm hover:scale-105 transition-transform duration-200">
-            <p class="text-green-700 font-bold text-sm mb-2">{valor.numero}</p>
-            <h3 class="text-stone-800 font-bold text-xl mb-3">{valor.titulo}</h3>
-            <p class="text-stone-500 leading-relaxed">{valor.descripcion}</p>
+          <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm hover:scale-105 transition-transform duration-200">
+            <p class="text-green-700 font-bold text-xs sm:text-sm mb-2">{valor.numero}</p>
+            <h3 class="text-stone-800 font-bold text-base sm:text-xl mb-2 sm:mb-3 leading-snug">{valor.titulo}</h3>
+            <p class="text-stone-500 text-sm sm:text-base leading-relaxed">{valor.descripcion}</p>
           </div>
         ))}
       </div>
@@ -108,28 +108,28 @@ import Navbar from '../components/Navbar.astro';
   </section>
 
 <!-- NUESTROS SERVICIOS -->
-  <section id="servicios" class="py-16 px-6 bg-stone-50">
+  <section id="servicios" class="py-16 px-5 sm:px-6 bg-stone-50">
     <div class="max-w-5xl mx-auto">
 
-      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+      <p class="text-green-700 uppercase tracking-widest text-lg sm:text-xl font-semibold mb-4 text-center">
         Nuestros Servicios
       </p>
-      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+      <h2 class="text-4xl font-bold text-stone-800 text-center mb-10">
         Cuidado integral para tu ser querido
       </h2>
 
       <!-- Tipos de estancia -->
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 class="text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">Estancia Permanente</h3>
-          <p class="text-stone-600 text-lg leading-relaxed">
+      <div class="grid grid-cols-2 gap-3 sm:gap-6 mb-12">
+        <div class="bg-white rounded-2xl p-4 sm:p-8 shadow-sm">
+          <h3 class="text-lg sm:text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-3 sm:pl-4 leading-snug">Estancia Permanente</h3>
+          <p class="text-stone-600 text-sm sm:text-lg leading-relaxed">
             Un hogar definitivo donde tu familiar vivirá con atención profesional, 
             comunidad y bienestar los 365 días del año.
           </p>
         </div>
-        <div class="bg-white rounded-2xl p-8 shadow-sm">
-          <h3 class="text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">Estancia Temporal</h3>
-          <p class="text-stone-600 text-lg leading-relaxed">
+        <div class="bg-white rounded-2xl p-4 sm:p-8 shadow-sm">
+          <h3 class="text-lg sm:text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-3 sm:pl-4 leading-snug">Estancia Temporal</h3>
+          <p class="text-stone-600 text-sm sm:text-lg leading-relaxed">
             Ideal para períodos de recuperación o descanso del cuidador, 
             con la misma calidad de atención que la estancia permanente.
           </p>
@@ -137,8 +137,8 @@ import Navbar from '../components/Navbar.astro';
       </div>
 
       <!-- Servicios incluidos -->
-      <h3 class="text-2xl font-bold text-stone-800 mb-6 border-l-4 border-green-700 pl-4">¿Qué incluye?</h3>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <h3 class="text-xl sm:text-2xl font-bold text-stone-800 mb-6 border-l-4 border-green-700 pl-4">¿Qué incluye?</h3>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         {[
           "Habitaciones cómodas, seguras y adaptadas",
           "Alimentación balanceada y supervisada",
@@ -150,9 +150,9 @@ import Navbar from '../components/Navbar.astro';
           "Equipo interdisciplinario de salud",
           "Entorno natural que promueve el bienestar",
         ].map((servicio) => (
-          <div class="bg-white rounded-xl p-5 shadow-sm flex items-start gap-3 hover:scale-105 transition-transform duration-200 cursor-default">
-            <span class="text-green-700 text-xl mt-0.5">✓</span>
-            <p class="text-stone-600">{servicio}</p>
+          <div class="bg-white rounded-xl p-3 sm:p-5 shadow-sm flex items-start gap-2 sm:gap-3 hover:scale-105 transition-transform duration-200 cursor-default">
+            <span class="text-green-700 text-lg sm:text-xl mt-0.5 shrink-0">✓</span>
+            <p class="text-stone-600 text-sm sm:text-base leading-snug">{servicio}</p>
           </div>
         ))}
       </div>
@@ -161,13 +161,13 @@ import Navbar from '../components/Navbar.astro';
   </section>
 
 <!-- CONTACTO -->
-  <section id="contacto" class="py-16 px-6 bg-white">
+  <section id="contacto" class="py-16 px-5 sm:px-6 bg-white">
     <div class="max-w-5xl mx-auto">
 
-      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+      <p class="text-green-700 uppercase tracking-widest text-lg sm:text-xl font-semibold mb-4 text-center">
         Contacto
       </p>
-      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+      <h2 class="text-4xl font-bold text-stone-800 text-center mb-10">
         Estamos aquí para ayudarte
       </h2>
 
@@ -251,8 +251,8 @@ import Navbar from '../components/Navbar.astro';
   </section>
 
   <!-- FOOTER -->
-  <footer class="bg-stone-800 text-stone-400 py-12 px-6">
-    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+  <footer class="bg-stone-800 text-stone-400 py-12 px-5 sm:px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8 md:gap-10">
 
       <!-- Logo y descripción -->
       <div class="max-w-sm">

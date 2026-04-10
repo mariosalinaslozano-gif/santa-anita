@@ -1,6 +1,17 @@
 @import "tailwindcss";
 
 @layer base {
+  html {
+    /* Safer text sizing on phones (closer to desktop rhythm, avoids tiny default zoom quirks) */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;
