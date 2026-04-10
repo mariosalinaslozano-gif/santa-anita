@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+      /* Fixed navbar (~h-16) + small gap so section titles aren’t hidden */
+      scroll-padding-top: 5rem;
+    }
+  }
+}
