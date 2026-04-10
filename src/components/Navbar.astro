@@ -1,0 +1,39 @@
+---
+const links = [
+  { href: "#quienes-somos", label: "Quiénes Somos" },
+  { href: "#servicios", label: "Servicios" },
+  { href: "#instalaciones", label: "Instalaciones" }
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+  <nav class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <a href="#" class="group inline-flex items-center rounded-xl border border-transparent bg-white/80 px-4 py-2 shadow-sm transition-all hover:border-green-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600/40">
+        <img
+          src="/LogoSantaAnita.png"
+          alt="Casa de Retiro Santa Anita"
+          class="h-11 md:h-12 w-auto object-contain transition-transform duration-200 group-hover:scale-[1.02]"
+        />
+    </a>
+
+    <!-- Desktop menu -->
+    <ul class="hidden md:flex items-center gap-8">
+      {links.map((link) => (
+        <li>
+          <a href={link.href} class="text-stone-600 hover:text-green-700 transition-colors font-medium">
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <a href="#contacto" class="hidden md:block bg-green-700 text-white px-5 py-2 rounded-full font-medium hover:bg-green-800 transition-colors">
+      Contáctanos
+    </a>
+
+  </nav>
+</header>
+
+<!-- Offset so content doesn't hide behind fixed navbar -->
+<div class="h-16"></div>

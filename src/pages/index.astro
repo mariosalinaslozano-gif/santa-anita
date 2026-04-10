@@ -1,17 +1,302 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Inicio">
+  <Navbar />
+
+
+  <!-- HERO -->
+  <section class="py-24 bg-stone-50 flex flex-col justify-center items-center text-center px-6">
+    <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4">
+      Casa de Retiro Santa Anita
+    </p>
+    <h1 class="text-4xl md:text-6xl font-bold text-stone-800 max-w-4xl leading-tight mb-6">
+      Un hogar donde cada día se vive plenamente
+    </h1>
+    <p class="text-stone-500 text-lg md:text-xl max-w-2xl mb-10">
+      Un espacio para que las personas adultas mayores vivan con tranquilidad, 
+      dignidad y acompañamiento profesional, en un entorno natural que promueve 
+      el bienestar físico, emocional y social.
+    </p>
+    <a href="#contacto" class="bg-green-700 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-green-800 transition-colors">
+      Contáctanos
+    </a>
+  </section>
+
+  <!-- QUIÉNES SOMOS -->
+  <section id="quienes-somos" class="py-16 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+
+      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+        Quiénes Somos
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+        Conoce nuestra historia y valores
+      </h2>
+
+      <!-- Misión -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Misión</h3>
+        <p class="text-stone-600 text-lg leading-relaxed">
+          Ofrecer a las personas adultas mayores un entorno que conecte con la naturaleza, 
+          seguro y profesional, que potencie su calidad de vida. A través de programas integrales: 
+          ejercicio, actividades cognitivas, terapia ocupacional, convivencia social y espacios 
+          recreativos. Promovemos un envejecimiento activo, saludable y digno, realizando nuestro 
+          trabajo con amor, respeto y calidez, para que cada día se viva con sentido y bienestar.
+        </p>
+      </div>
+
+      <!-- Visión -->
+      <div class="mb-8">
+        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">Visión</h3>
+        <p class="text-stone-600 text-lg leading-relaxed">
+          Ser la casa de retiro de referencia en la región por su excelencia en la atención 
+          integral a adultos mayores, reconocida por la calidad humana de sus servicios, la 
+          innovación en actividades cognitivas y la creación de comunidades donde cada residente 
+          vive con propósito, seguridad y plenitud, en un entorno que favorece la tranquilidad, 
+          equilibrio y conexión con la naturaleza.
+        </p>
+      </div>
+
+      <!-- Qué nos diferencia -->
+      <div class="bg-stone-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-stone-800 mb-4 border-l-4 border-green-700 pl-4">¿Qué nos diferencia?</h3>
+        <p class="text-stone-600 text-lg leading-relaxed">
+          Promovemos un envejecimiento saludable a través de un trato cálido, respetuoso y digno, 
+          reconociendo a cada residente como una persona única, con historia, valores y necesidades 
+          propias, basados en actividades físicas, cognitivas, emocionales y sociales.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section id="valores" class="py-16 px-6 bg-stone-50">
+    <div class="max-w-5xl mx-auto">
+
+      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+        Nuestros Valores
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+        Lo que nos guía cada día
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { numero: "01", titulo: "Dignidad", descripcion: "Reconocemos y honramos la historia, decisiones y derechos de cada residente, garantizando un trato respetuoso y humano en todo momento." },
+          { numero: "02", titulo: "Calidez Humana", descripcion: "Servimos con sensibilidad, cercanía y cariño, creando un ambiente de confianza, afecto y acompañamiento emocional." },
+          { numero: "03", titulo: "Autonomía", descripcion: "Fomentamos la independencia y la capacidad de decisión de cada residente, respetando sus ritmos, gustos y estilo de vida." },
+          { numero: "04", titulo: "Armonía con la Naturaleza", descripcion: "Promovemos el bienestar integral a través de un entorno campestre que favorece la serenidad y una vida más plena." },
+          { numero: "05", titulo: "Profesionalismo", descripcion: "Actuamos con responsabilidad, ética y compromiso, cumpliendo protocolos y asegurando una atención organizada y de calidad." },
+          { numero: "06", titulo: "Seguridad", descripcion: "Priorizamos la protección física y emocional de los residentes mediante espacios adecuados, normas claras y personal capacitado." },
+          { numero: "07", titulo: "Convivencia y Comunidad", descripcion: "Impulsamos relaciones positivas, el respeto mutuo y la integración social como base de una comunidad activa y solidaria." },
+          { numero: "08", titulo: "Responsabilidad y Orden", descripcion: "Cumplimos y hacemos cumplir el reglamento interno para garantizar la sana convivencia y el bienestar común." },
+          { numero: "09", titulo: "Satisfacción en el Proceso", descripcion: "Promovemos que residentes y colaboradores encuentren bienestar y sentido en las actividades cotidianas, valorando cada etapa del camino." },
+        ].map((valor) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm hover:scale-105 transition-transform duration-200">
+            <p class="text-green-700 font-bold text-sm mb-2">{valor.numero}</p>
+            <h3 class="text-stone-800 font-bold text-xl mb-3">{valor.titulo}</h3>
+            <p class="text-stone-500 leading-relaxed">{valor.descripcion}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+<!-- NUESTROS SERVICIOS -->
+  <section id="servicios" class="py-16 px-6 bg-stone-50">
+    <div class="max-w-5xl mx-auto">
+
+      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+        Nuestros Servicios
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+        Cuidado integral para tu ser querido
+      </h2>
+
+      <!-- Tipos de estancia -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">Estancia Permanente</h3>
+          <p class="text-stone-600 text-lg leading-relaxed">
+            Un hogar definitivo donde tu familiar vivirá con atención profesional, 
+            comunidad y bienestar los 365 días del año.
+          </p>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="text-2xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">Estancia Temporal</h3>
+          <p class="text-stone-600 text-lg leading-relaxed">
+            Ideal para períodos de recuperación o descanso del cuidador, 
+            con la misma calidad de atención que la estancia permanente.
+          </p>
+        </div>
+      </div>
+
+      <!-- Servicios incluidos -->
+      <h3 class="text-2xl font-bold text-stone-800 mb-6 border-l-4 border-green-700 pl-4">¿Qué incluye?</h3>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        {[
+          "Habitaciones cómodas, seguras y adaptadas",
+          "Alimentación balanceada y supervisada",
+          "Programas de ejercicio y movilidad",
+          "Actividades cognitivas y estimulación mental",
+          "Terapia ocupacional enfocada en la autonomía",
+          "Espacios recreativos y de convivencia social",
+          "Atención y acompañamiento profesional",
+          "Equipo interdisciplinario de salud",
+          "Entorno natural que promueve el bienestar",
+        ].map((servicio) => (
+          <div class="bg-white rounded-xl p-5 shadow-sm flex items-start gap-3 hover:scale-105 transition-transform duration-200 cursor-default">
+            <span class="text-green-700 text-xl mt-0.5">✓</span>
+            <p class="text-stone-600">{servicio}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+<!-- CONTACTO -->
+  <section id="contacto" class="py-16 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+
+      <p class="text-green-700 uppercase tracking-widest text-xl font-semibold mb-4 text-center">
+        Contacto
+      </p>
+      <h2 class="text-3xl md:text-4xl font-bold text-stone-800 text-center mb-10">
+        Estamos aquí para ayudarte
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+        <!-- Info de contacto -->
+        <div class="flex flex-col gap-6">
+
+          <a href="tel:8135555327" class="bg-stone-50 rounded-2xl p-6 flex items-center gap-4 hover:bg-stone-100 transition-colors">
+            <span class="text-green-700 text-2xl">📞</span>
+            <div>
+              <p class="text-sm text-stone-400 uppercase tracking-widest">Teléfono</p>
+              <p class="text-stone-800 font-semibold text-lg">81 35 55 53 27</p>
+            </div>
+          </a>
+
+          <a href="mailto:santa.anita925@mail.com" class="bg-stone-50 rounded-2xl p-6 flex items-center gap-4 hover:bg-stone-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+</svg>
+            <div>
+              <p class="text-sm text-stone-400 uppercase tracking-widest">Correo</p>
+              <p class="text-stone-800 font-semibold text-lg">santa.anita925@mail.com</p>
+            </div>
+          </a>
+
+          <a href="https://wa.me/528135555327" target="_blank" class="bg-green-700 rounded-2xl p-6 flex items-center gap-4 hover:bg-green-800 transition-colors">
+            <svg class="w-7 h-7 text-white shrink-0" fill="currentColor" viewBox="0 0 24 24">
+  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+</svg>
+            <div>
+              <p class="text-sm text-green-200 uppercase tracking-widest">WhatsApp</p>
+              <p class="text-white font-semibold text-lg">Escríbenos ahora</p>
+            </div>
+          </a>
+
+		<a href="https://www.facebook.com/santa.anita.casaderetiro" target="_blank" class="bg-stone-50 rounded-2xl p-6 flex items-center gap-4 hover:bg-stone-100 transition-colors">
+  		<svg class="w-7 h-7 text-green-700 shrink-0" fill="blue" viewBox="0 0 24 24">
+  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+</svg>
+  		<div>
+    		<p class="text-sm text-stone-400 uppercase tracking-widest">Facebook</p>
+    		<p class="text-stone-800 font-semibold text-lg">Santa Anita - Casa de Retiro</p>
+  		</div>
+		</a>
+
+          <a href="https://www.instagram.com/santa.anita.casaderetiro" target="_blank" class="bg-stone-50 rounded-2xl p-6 flex items-center gap-4 hover:bg-stone-100 transition-colors">
+            <svg class="w-7 h-7 text-green-700 shrink-0" fill="405de6" viewBox="0 0 24 24">
+  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+</svg>
+            <div>
+              <p class="text-sm text-stone-400 uppercase tracking-widest">Instagram</p>
+              <p class="text-stone-800 font-semibold text-lg">@santa.anita.casaderetiro</p>
+            </div>
+          </a>
+
+          <div class="bg-stone-50 rounded-2xl p-6 flex items-center gap-4">
+            <span class="text-green-700 text-2xl">📍</span>
+            <div>
+              <p class="text-sm text-stone-400 uppercase tracking-widest">Dirección</p>
+              <p class="text-stone-800 font-semibold text-lg">21 de marzo 275, Congregación San Francisco, Santiago, N.L., C.P. 67313</p>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mapa -->
+        <div class="rounded-2xl overflow-hidden shadow-sm h-full min-h-96">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3594.1!2d-100.1449!3d25.4333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2s21+de+marzo+275%2C+Congregaci%C3%B3n+San+Francisco%2C+Santiago%2C+N.L.!5e0!3m2!1ses!2smx!4v1"
+            width="100%"
+            height="100%"
+            style="border:0; min-height: 380px;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-800 text-stone-400 py-12 px-6">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+      <!-- Logo y descripción -->
+      <div class="max-w-sm">
+        <a href="#" class="group mb-3 block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500/40">
+          <img
+            src="/LogoSantaAnita.png"
+            alt="Casa de Retiro Santa Anita"
+            class="h-auto w-full object-contain transition-transform duration-200 group-hover:scale-[1.01]"
+          />
+        </a>
+        <p class="text-stone-400 leading-relaxed text-sm">
+          Un hogar donde cada día se vive plenamente. Santiago, Nuevo León, México.
+        </p>
+      </div>
+
+      <!-- Links rápidos -->
+      <div>
+        <p class="text-white font-semibold mb-4">Navegación</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="#quienes-somos" class="hover:text-green-400 transition-colors">Quiénes Somos</a></li>
+          <li><a href="#valores" class="hover:text-green-400 transition-colors">Valores</a></li>
+          <li><a href="#servicios" class="hover:text-green-400 transition-colors">Servicios</a></li>
+          <li><a href="#contacto" class="hover:text-green-400 transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto rápido -->
+      <div>
+        <p class="text-white font-semibold mb-4">Contacto</p>
+        <ul class="flex flex-col gap-2 text-sm">
+          <li><a href="tel:8135555327" class="hover:text-green-400 transition-colors">81 35 55 53 27</a></li>
+          <li><a href="mailto:santa.anita925@mail.com" class="hover:text-green-400 transition-colors">santa.anita925@mail.com</a></li>
+          <li><a href="https://wa.me/528135555327" target="_blank" class="hover:text-green-400 transition-colors">WhatsApp</a></li>
+          <li class="text-stone-500 text-xs mt-1">21 de marzo 275, Congregación San Francisco, Santiago, N.L.</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="max-w-5xl mx-auto mt-10 pt-6 border-t border-stone-700 text-center text-xs text-stone-500">
+      © {new Date().getFullYear()} Casa de Retiro Santa Anita. Todos los derechos reservados.
+    </div>
+
+  </footer>
+
+</Layout>
