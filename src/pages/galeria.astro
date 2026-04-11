@@ -122,16 +122,20 @@ const categorias = [
     </div>
   </section>
 
-  <a
-    href="/"
-    class="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 z-40 inline-flex min-h-[48px] max-w-[calc(100vw-1.5rem)] touch-manipulation items-center gap-2 rounded-full bg-green-700 px-4 py-2.5 text-sm font-medium text-white shadow-lg ring-1 ring-green-900/10 transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 sm:right-6 sm:px-5 sm:py-3"
-    aria-label="Volver al inicio"
+  <div
+    class="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-end px-3 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6"
   >
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-    </svg>
-    Inicio
-  </a>
+    <a
+      href="/"
+      class="pointer-events-auto inline-flex min-h-[48px] max-w-full shrink-0 touch-manipulation items-center gap-2 rounded-full bg-green-700 px-4 py-2.5 text-sm font-medium text-white shadow-lg ring-1 ring-green-900/10 transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 sm:px-5 sm:py-3"
+      aria-label="Volver al inicio"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      Inicio
+    </a>
+  </div>
 
   <PhotoLightbox />
 

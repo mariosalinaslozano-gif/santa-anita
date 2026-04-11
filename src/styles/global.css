@@ -1,18 +1,23 @@
 @import "tailwindcss";
 
 @layer base {
+  /*
+   * Avoid horizontal overflow from `100vw` (wider than visible layout when a vertical
+   * scrollbar is present). Prefer % / max-w-full / min-w-0.
+   *
+   * Keep horizontal containment on **body** only — avoid `overflow-x` on `html` plus
+   * `body` (or `overflow-y` on both), which can produce an extra scrollbar gutter in
+   * Chromium. Document vertical scroll stays on the viewport as a single chain.
+   */
   html {
-    /* Safer text sizing on phones (closer to desktop rhythm, avoids tiny default zoom quirks) */
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
-    overflow-x: clip;
   }
 
   body {
+    overflow-x: hidden;
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    /* Avoid accidental horizontal pan on small viewports */
-    overflow-x: clip;
   }
 
   @media (prefers-reduced-motion: no-preference) {
