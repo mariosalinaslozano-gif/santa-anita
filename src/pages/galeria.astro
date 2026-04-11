@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import PhotoLightbox from '../components/PhotoLightbox.astro';
+
+const categorias = [
+  {
+    nombre: "Entrada y Exteriores",
+    fotos: [
+      { src: "/Images/IMG_4624.jpg", alt: "Entrada principal" },
+      { src: "/Images/IMG_4628.jpg", alt: "Acceso principal" },
+      { src: "/Images/IMG_4631.jpg", alt: "Exterior de Santa Anita" },
+      { src: "/Images/IMG_4636.jpg", alt: "Exteriores" },
+    ]
+  },
+  {
+    nombre: "Alberca y Jardines",
+    fotos: [
+      { src: "/Images/5412E407-A2A3-49F5-983D-D459BE3C3876.png", alt: "Alberca" },
+      { src: "/Images/IMG_4676.jpg", alt: "Área de alberca" },
+      { src: "/Images/IMG_4873.jpg", alt: "Fuente y jardín" },
+    ]
+  },
+  {
+    nombre: "Áreas Comunes",
+    fotos: [
+      { src: "/Images/IMG_4638.jpg", alt: "Sala común" },
+      { src: "/Images/IMG_4639.jpg", alt: "Área de convivencia" },
+      { src: "/Images/IMG_4644.jpg", alt: "Sala de estar" },
+      { src: "/Images/IMG_4660.jpg", alt: "Comedor" },
+      { src: "/Images/IMG_4662.jpg", alt: "Área social" },
+      { src: "/Images/IMG_4640.jpg", alt: "Elevador" },
+    ]
+  },
+  {
+    nombre: "Habitaciones",
+    fotos: [
+      { src: "/Images/IMG_4647.jpg", alt: "Habitación" },
+      { src: "/Images/IMG_4649.jpg", alt: "Habitación privada" },
+      { src: "/Images/IMG_4664.jpg", alt: "Habitación equipada" },
+      { src: "/Images/IMG_4665.jpg", alt: "Habitación con ventana" },
+      { src: "/Images/IMG_4668.jpg", alt: "Habitación cómoda" },
+      { src: "/Images/IMG_4688.jpg", alt: "Habitación" },
+      { src: "/Images/IMG_4691.jpg", alt: "Habitación" },
+      { src: "/Images/IMG_4692.jpg", alt: "Habitación" },
+      { src: "/Images/IMG_4694.jpg", alt: "Habitación" },
+    ]
+  },
+  {
+    nombre: "Mini Gimnasio",
+    fotos: [
+      { src: "/Images/IMG_4677.jpg", alt: "Mini gimnasio" },
+      { src: "/Images/IMG_4678.jpg", alt: "Equipo de ejercicio" },
+      { src: "/Images/IMG_4679.jpg", alt: "Área de ejercicio" },
+    ]
+  },
+  {
+    nombre: "Atención Médica",
+    fotos: [
+      { src: "/Images/IMG_4736.jpg", alt: "Atención médica personalizada" },
+      { src: "/Images/IMG_4743.jpg", alt: "Cuidado profesional" },
+      { src: "/Images/IMG_4750.jpg", alt: "Atención al residente" },
+      { src: "/Images/IMG_4763.jpg", alt: "Equipo médico" },
+      { src: "/Images/IMG_4767.jpg", alt: "Consulta médica" },
+      { src: "/Images/IMG_4778.jpg", alt: "Cuidado integral" },
+      { src: "/Images/IMG_4782.jpg", alt: "Atención personalizada" },
+    ]
+  },
+]
+---
+
+<Layout title="Galería">
+  <Navbar />
+
+  <section class="py-12 sm:py-16 px-4 sm:px-6 pb-28 sm:pb-32 bg-white">
+    <div class="max-w-5xl mx-auto">
+
+      <a href="/" class="text-green-700 text-sm font-medium hover:underline mb-6 sm:mb-8 inline-block touch-manipulation py-1">
+        ← Regresar al inicio
+      </a>
+
+      <p class="text-green-700 uppercase tracking-widest text-base sm:text-xl font-semibold mb-4 text-center">
+        Galería
+      </p>
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-stone-800 text-center mb-4 text-balance px-1">
+        Conoce cada rincón de Santa Anita
+      </h1>
+      <p class="text-stone-500 text-center text-base sm:text-lg mb-10 sm:mb-16 max-w-2xl mx-auto leading-relaxed px-1">
+        Un espacio diseñado con amor, pensado para que cada residente se sienta en casa.
+      </p>
+
+      {categorias.map((categoria) => (
+        <div class="mb-12 sm:mb-16">
+          <h2 class="text-lg sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6 border-l-4 border-green-700 pl-3 sm:pl-4 leading-snug text-balance">
+            {categoria.nombre}
+          </h2>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+            {categoria.fotos.map((foto) => (
+              <button
+                type="button"
+                data-lightbox-open
+                data-src={foto.src}
+                data-alt={foto.alt}
+                aria-label={`Ver en pantalla completa: ${foto.alt}`}
+                class="group relative block w-full touch-manipulation overflow-hidden rounded-2xl border-0 bg-stone-100 p-0 text-left shadow-sm ring-1 ring-stone-200/80 transition hover:ring-green-600/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+              >
+                <span class="block aspect-square w-full overflow-hidden">
+                  <img
+                    src={foto.src}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </span>
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+
+    </div>
+  </section>
+
+  <a
+    href="/"
+    class="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 z-40 inline-flex min-h-[48px] max-w-[calc(100vw-1.5rem)] touch-manipulation items-center gap-2 rounded-full bg-green-700 px-4 py-2.5 text-sm font-medium text-white shadow-lg ring-1 ring-green-900/10 transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 sm:right-6 sm:px-5 sm:py-3"
+    aria-label="Volver al inicio"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+    </svg>
+    Inicio
+  </a>
+
+  <PhotoLightbox />
+
+</Layout>
