@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+---
+
+<Layout title="Aviso de Privacidad">
+  <Navbar />
+
+  <section class="py-16 px-6 pb-28 sm:pb-32 bg-white">
+    <div class="max-w-3xl mx-auto">
+
+      <a href="/" class="text-green-700 text-sm font-medium hover:underline mb-8 inline-block">
+        ← Regresar al inicio
+      </a>
+
+      <h1 class="text-3xl md:text-4xl font-bold text-stone-800 mb-4">
+        Aviso de Privacidad
+      </h1>
+      <p class="text-stone-400 text-sm mb-10">Última actualización: Abril 2026</p>
+
+      <div class="prose prose-stone max-w-none space-y-8 text-stone-600 text-lg leading-relaxed">
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">1. Responsable</h2>
+          <p>
+            Casa de Retiro Santa Anita, con domicilio en 21 de marzo 275, Congregación San Francisco, 
+            Santiago, Nuevo León, C.P. 67313, es responsable del tratamiento de sus datos personales 
+            conforme a la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDPPP).
+          </p>
+          <p class="mt-3">
+            Para cualquier consulta relacionada con este aviso, puede contactarnos en: 
+            <a href="mailto:santa.anita925@mail.com" class="text-green-700 hover:underline">santa.anita925@mail.com</a>
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">2. Datos personales que recabamos</h2>
+          <p>Recabamos los siguientes datos personales a través de nuestro formulario de contacto y herramientas de analítica:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Nombre completo</li>
+            <li>Correo electrónico</li>
+            <li>Número de teléfono</li>
+            <li>Mensaje o consulta</li>
+            <li>Datos de navegación (páginas visitadas, tiempo de visita, dispositivo utilizado)</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">3. Finalidad del tratamiento</h2>
+          <p>Sus datos personales serán utilizados para las siguientes finalidades:</p>
+          <ul class="list-disc pl-6 mt-3 space-y-1">
+            <li>Atender sus consultas y solicitudes de información sobre nuestros servicios</li>
+            <li>Contactarle para brindarle información sobre disponibilidad y tarifas</li>
+            <li>Mejorar la experiencia de navegación en nuestro sitio web</li>
+            <li>Analizar el uso del sitio web para optimizar nuestros servicios</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">4. Transferencia de datos</h2>
+          <p>
+            Casa de Retiro Santa Anita no vende, cede ni transfiere sus datos personales a terceros, 
+            salvo que sea requerido por autoridad competente o por disposición legal.
+          </p>
+          <p class="mt-3">
+            Utilizamos Google Analytics y Microsoft Clarity para analizar el tráfico del sitio. 
+            Estas herramientas recopilan datos de navegación de forma anónima conforme a sus 
+            propias políticas de privacidad.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">5. Derechos ARCO</h2>
+          <p>
+            Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al tratamiento de sus 
+            datos personales (derechos ARCO). Para ejercer estos derechos, envíe su solicitud a:
+          </p>
+          <p class="mt-3">
+            <a href="mailto:santa.anita925@mail.com" class="text-green-700 hover:underline">santa.anita925@mail.com</a>
+          </p>
+          <p class="mt-3">
+            Responderemos su solicitud en un plazo máximo de 20 días hábiles conforme a lo 
+            establecido por la LFPDPPP.
+          </p>
+        </div>
+
+        <div>
+          <h2 class="text-xl font-bold text-stone-800 mb-3 border-l-4 border-green-700 pl-4">6. Cambios al aviso de privacidad</h2>
+          <p>
+            Casa de Retiro Santa Anita se reserva el derecho de modificar este aviso de privacidad 
+            en cualquier momento. Cualquier cambio será publicado en esta misma página con la fecha 
+            de actualización correspondiente.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div
+    class="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-end px-3 pb-[max(1rem,env(safe-area-inset-bottom))] sm:px-6"
+  >
+    <a
+      href="/"
+      class="pointer-events-auto inline-flex min-h-[48px] max-w-full shrink-0 touch-manipulation items-center gap-2 rounded-full bg-green-700 px-4 py-2.5 text-sm font-medium text-white shadow-lg ring-1 ring-green-900/10 transition hover:bg-green-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 sm:px-5 sm:py-3"
+      aria-label="Volver al inicio"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+      </svg>
+      Inicio
+    </a>
+  </div>
+
+</Layout>
