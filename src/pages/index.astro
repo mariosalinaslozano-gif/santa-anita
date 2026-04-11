@@ -6,15 +6,12 @@ import PhotoLightbox from '../components/PhotoLightbox.astro';
 const instalacionesFotos = [
   { src: "/Images/IMG_4628.jpg", alt: "Entrada de Santa Anita" },
   { src: "/Images/IMG_4631.jpg", alt: "Acceso principal" },
-  { src: "/Images/5412E407-A2A3-49F5-983D-D459BE3C3876.png", alt: "Alberca" },
   { src: "/Images/IMG_4638.jpg", alt: "Sala común" },
   { src: "/Images/IMG_4639.jpg", alt: "Espacios comunes" },
   { src: "/Images/IMG_4660.jpg", alt: "Área de convivencia" },
   { src: "/Images/IMG_4647.jpg", alt: "Habitación" },
   { src: "/Images/IMG_4664.jpg", alt: "Habitación privada" },
   { src: "/Images/IMG_4677.jpg", alt: "Mini gimnasio" },
-  { src: "/Images/IMG_4736.jpg", alt: "Atención médica personalizada" },
-  { src: "/Images/IMG_4763.jpg", alt: "Cuidado profesional" },
   { src: "/Images/IMG_4873.jpg", alt: "Fuente y jardín" },
 ];
 
@@ -38,9 +35,11 @@ const whatsappHref = `https://wa.me/528135555327?text=${encodeURIComponent(
 
   <!-- HERO -->
   <section class="py-16 sm:py-24 bg-stone-50 flex flex-col justify-center items-center text-center px-4 sm:px-6">
-    <p class="text-green-700 uppercase tracking-widest text-base sm:text-xl font-semibold mb-4">
-      Casa de Retiro Santa Anita
-    </p>
+    <img
+      src="/Images/LogoSantaAnita.png"
+      alt="Casa de Retiro Santa Anita"
+      class="mx-auto mb-6 h-24 sm:h-28 md:h-32 w-auto max-w-[min(100%,32rem)] object-contain"
+    />
     <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold text-stone-800 max-w-4xl leading-[1.15] sm:leading-tight mb-6 text-balance px-1">
       Un hogar donde cada día se vive plenamente
     </h1>
@@ -249,11 +248,11 @@ const whatsappHref = `https://wa.me/528135555327?text=${encodeURIComponent(
         <!-- Info de contacto -->
         <div class="flex flex-col gap-6">
 
-          <a href="tel:8135555327" class="touch-manipulation bg-stone-50 rounded-2xl p-4 sm:p-6 flex items-center gap-3 sm:gap-4 hover:bg-stone-100 transition-colors">
+          <a href="tel:+528135555327" class="touch-manipulation bg-stone-50 rounded-2xl p-4 sm:p-6 flex items-center gap-3 sm:gap-4 hover:bg-stone-100 transition-colors">
             <span class="text-green-700 text-2xl">📞</span>
             <div>
               <p class="text-sm text-stone-400 uppercase tracking-widest">Teléfono</p>
-              <p class="text-stone-800 font-semibold text-lg">81 35 55 53 27</p>
+              <p class="text-stone-800 font-semibold text-lg">+52 81 35 55 53 27</p>
             </div>
           </a>
 
@@ -358,7 +357,7 @@ const whatsappHref = `https://wa.me/528135555327?text=${encodeURIComponent(
       <div>
         <p class="text-white font-semibold mb-4">Contacto</p>
         <ul class="flex flex-col gap-2 text-sm">
-          <li><a href="tel:8135555327" class="hover:text-green-400 transition-colors">81 35 55 53 27</a></li>
+          <li><a href="tel:+528135555327" class="hover:text-green-400 transition-colors">+52 81 35 55 53 27</a></li>
           <li><a href={mailtoHref} class="hover:text-green-400 transition-colors">santa.anita925@mail.com</a></li>
           <li><a href={whatsappHref} target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors">WhatsApp</a></li>
           <li class="text-stone-500 text-xs mt-1">21 de marzo 275, Congregación San Francisco, Santiago, N.L.</li>
