@@ -1,4 +1,6 @@
 ---
+import ScrollReveal from "../components/ScrollReveal.astro";
+
 interface Props {
   title: string;
   description?: string;
@@ -18,6 +20,7 @@ const { title, description = "Casa de Retiro Santa Anita - Un hogar donde cada d
   </head>
   <body class="min-h-[100dvh] overflow-x-hidden bg-white text-gray-800 font-sans antialiased">
     <slot />
+    <ScrollReveal />
   </body>
 </html>
 

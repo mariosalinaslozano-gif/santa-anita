@@ -8,7 +8,11 @@ const links = [
 
 <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-sm shadow-sm">
   <nav class="max-w-5xl mx-auto px-4 sm:px-6 py-3 md:py-4 flex items-center gap-3 sm:gap-4">
-    <a href="/" class="group inline-flex touch-manipulation items-center rounded-xl border border-transparent bg-white/80 px-3 sm:px-4 py-2 shadow-sm transition-all hover:border-green-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600/40 shrink-0">
+    <a
+      href="/"
+      data-nav-logo
+      class="group inline-flex touch-manipulation items-center rounded-xl border border-transparent bg-white/80 px-3 sm:px-4 py-2 shadow-sm transition-all hover:border-green-200 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600/40 shrink-0"
+    >
       <img
         src="/Images/LogoSantaAnita.png"
         alt="Casa de Retiro Santa Anita"
@@ -76,6 +80,22 @@ const links = [
 <div class="h-16"></div>
 
 <script>
+  /** Logo on home: smooth scroll to top (not an instant jump). Other pages: normal navigation to /. */
+  document.addEventListener("click", (e) => {
+    const logo = e.target instanceof Element ? e.target.closest("[data-nav-logo]") : null;
+    if (logo instanceof HTMLAnchorElement) {
+      const path = window.location.pathname.replace(/\/+$/, "") || "/";
+      if (path === "/") {
+        e.preventDefault();
+        const instant = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        window.scrollTo({ top: 0, behavior: instant ? "auto" : "smooth" });
+        if (window.location.hash) {
+          history.replaceState(null, "", window.location.pathname + window.location.search);
+        }
+      }
+    }
+  });
+
   /** Close mobile menu: section link, click outside, or Escape. */
   document.addEventListener("click", (e) => {
     const details = document.querySelector("details[data-mobile-nav]");
