@@ -3,54 +3,21 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import PhotoLightbox from '../components/PhotoLightbox.astro';
 
-const categorias = [
-  {
-    nombre: "Entrada y Exteriores",
-    fotos: [
-      { src: "/Images/IMG_4624.jpg", alt: "Entrada principal" },
-      { src: "/Images/IMG_4628.jpg", alt: "Acceso principal" },
-      { src: "/Images/IMG_4631.jpg", alt: "Exterior de Santa Anita" },
-      { src: "/Images/IMG_4636.jpg", alt: "Exteriores" },
-    ]
-  },
-  {
-    nombre: "Jardines",
-    fotos: [{ src: "/Images/IMG_4873.jpg", alt: "Fuente y jardín" }],
-  },
-  {
-    nombre: "Áreas Comunes",
-    fotos: [
-      { src: "/Images/IMG_4638.jpg", alt: "Sala común" },
-      { src: "/Images/IMG_4639.jpg", alt: "Área de convivencia" },
-      { src: "/Images/IMG_4644.jpg", alt: "Sala de estar" },
-      { src: "/Images/IMG_4660.jpg", alt: "Comedor" },
-      { src: "/Images/IMG_4662.jpg", alt: "Área social" },
-      { src: "/Images/IMG_4640.jpg", alt: "Elevador" },
-    ]
-  },
-  {
-    nombre: "Habitaciones",
-    fotos: [
-      { src: "/Images/IMG_4647.jpg", alt: "Habitación" },
-      { src: "/Images/IMG_4649.jpg", alt: "Habitación privada" },
-      { src: "/Images/IMG_4664.jpg", alt: "Habitación equipada" },
-      { src: "/Images/IMG_4665.jpg", alt: "Habitación con ventana" },
-      { src: "/Images/IMG_4668.jpg", alt: "Habitación cómoda" },
-      { src: "/Images/IMG_4688.jpg", alt: "Habitación" },
-      { src: "/Images/IMG_4691.jpg", alt: "Habitación" },
-      { src: "/Images/IMG_4692.jpg", alt: "Habitación" },
-      { src: "/Images/IMG_4694.jpg", alt: "Habitación" },
-    ]
-  },
-  {
-    nombre: "Mini Gimnasio",
-    fotos: [
-      { src: "/Images/IMG_4677.jpg", alt: "Mini gimnasio" },
-      { src: "/Images/IMG_4678.jpg", alt: "Equipo de ejercicio" },
-      { src: "/Images/IMG_4679.jpg", alt: "Área de ejercicio" },
-    ]
-  },
-]
+const galeriaFotos = [
+  { src: "/Images/IMG_4638.jpg", alt: "Sala común" },
+  { src: "/Images/IMG_4639.jpg", alt: "Sala de convivencia" },
+  { src: "/Images/IMG_4644.jpg", alt: "Sala de estar" },
+  { src: "/Images/IMG_4660.jpg", alt: "Comedor" },
+  { src: "/Images/IMG_4662.jpg", alt: "Área social" },
+  { src: "/Images/IMG_4640.jpg", alt: "Elevador" },
+  { src: "/Images/IMG_4664.jpg", alt: "Habitación" },
+  { src: "/Images/IMG_4677.jpg", alt: "Mini gimnasio" },
+  { src: "/Images/5412E407-A2A3-49F5-983D-D459BE3C3876.png", alt: "Alberca" },
+  { src: "/Images/IMG_4636.jpg", alt: "Exteriores" },
+  { src: "/Images/IMG_4658.jpg", alt: "Instalaciones" },
+  { src: "/Images/IMG_4689.jpg", alt: "Recámara" },
+  { src: "/Images/IMG_4695.jpg", alt: "Espacio interior" },
+];
 ---
 
 <Layout title="Galería">
@@ -73,35 +40,28 @@ const categorias = [
         Un espacio diseñado con amor, pensado para que cada residente se sienta en casa.
       </p>
 
-      {categorias.map((categoria) => (
-        <div class="mb-12 sm:mb-16">
-          <h2 class="text-lg sm:text-2xl font-bold text-stone-800 mb-4 sm:mb-6 border-l-4 border-green-700 pl-3 sm:pl-4 leading-snug text-balance">
-            {categoria.nombre}
-          </h2>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
-            {categoria.fotos.map((foto) => (
-              <button
-                type="button"
-                data-lightbox-open
-                data-src={foto.src}
-                data-alt={foto.alt}
-                aria-label={`Ver en pantalla completa: ${foto.alt}`}
-                class="group relative block w-full touch-manipulation overflow-hidden rounded-2xl border-0 bg-stone-100 p-0 text-left shadow-sm ring-1 ring-stone-200/80 transition hover:ring-green-600/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
-              >
-                <span class="block aspect-square w-full overflow-hidden">
-                  <img
-                    src={foto.src}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
-                </span>
-              </button>
-            ))}
-          </div>
-        </div>
-      ))}
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+        {galeriaFotos.map((foto) => (
+          <button
+            type="button"
+            data-lightbox-open
+            data-src={foto.src}
+            data-alt={foto.alt}
+            aria-label={`Ver en pantalla completa: ${foto.alt}`}
+            class="group relative block w-full touch-manipulation overflow-hidden rounded-2xl border-0 bg-stone-100 p-0 text-left shadow-sm ring-1 ring-stone-200/80 transition hover:ring-green-600/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+          >
+            <span class="block aspect-square w-full overflow-hidden">
+              <img
+                src={foto.src}
+                alt=""
+                loading="lazy"
+                decoding="async"
+                class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </span>
+          </button>
+        ))}
+      </div>
 
     </div>
   </section>
