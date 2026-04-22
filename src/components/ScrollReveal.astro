@@ -1,7 +1,5 @@
 <script is:inline>
   (function () {
-    var observed = typeof WeakSet !== "undefined" ? new WeakSet() : null;
-
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       document.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
         el.classList.add("is-visible");
@@ -18,17 +16,16 @@
             entries.forEach(function (entry) {
               if (entry.isIntersecting) {
                 entry.target.classList.add("is-visible");
-                io.unobserve(entry.target);
+                return;
               }
+              entry.target.classList.remove("is-visible");
             });
           },
           { rootMargin: "0px 0px -8% 0px", threshold: 0.06 }
         );
       }
 
-      document.querySelectorAll(".reveal-on-scroll:not(.is-visible)").forEach(function (el) {
-        if (observed && observed.has(el)) return;
-        if (observed) observed.add(el);
+      document.querySelectorAll(".reveal-on-scroll").forEach(function (el) {
         io.observe(el);
       });
     }
